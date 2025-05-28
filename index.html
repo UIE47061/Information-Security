@@ -1,0 +1,137 @@
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>資安小知識：加密勒索危機大解密</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "animejs": "https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.es.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="minimal-header">
+    <nav class="top-nav">
+      <div class="brand"><span class="lock-ico">🔒</span>資安大解密</div>
+      <ul>
+        <li><a href="#about">勒索病毒</a></li>
+        <li><a href="#why">感染原因</a></li>
+        <li><a href="#how-prevent">如何預防</a></li>
+        <li><a href="#rescue">資料救援</a></li>
+        <li><a href="#backup">備份好處</a></li>
+        <li><a href="#more">更多Q&A</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>加密勒索危機大解密</h1>
+      <p class="subtitle">認識威脅、正確防範，讓你的電腦更安全！</p>
+      <button id="goto-game-btn" class="game-btn-minimal">🎮 病毒打擊遊戲</button>
+    </div>
+  </header>
+  <main id="main-content">
+    <section id="about" class="minimal-section">
+      <h2>什麼是加密勒索（Ransomware）？</h2>
+      <p>
+        勒索病毒是一種<span class="highlight">惡意攻擊</span>，會加密你的檔案，並要求支付贖金才能解密。<br>
+        <b>⚡️ 無論付錢與否，都可能無法救回檔案，也可能遭遇資料外洩！</b>
+      </p>
+    </section>
+
+    <section id="why" class="minimal-section">
+      <h2>為什麼會中加密勒索病毒？</h2>
+      <div class="cause-grid-minimal">
+        <button class="cause-btn" data-answer="sns">✉️ 不明信件</button>
+        <button class="cause-btn" data-answer="software">💻 盜版軟體</button>
+        <button class="cause-btn" data-answer="update">🔧 久未更新</button>
+        <button class="cause-btn" data-answer="usb">🔌 陌生裝置</button>
+        <button class="cause-btn" data-answer="social">😈 社交誘騙</button>
+        <button class="cause-btn" data-answer="network">🌐 弱密碼/暴露服務</button>
+      </div>
+      <div id="why-answer" class="minimal-answer"></div>
+    </section>
+
+    <section id="how-prevent" class="minimal-section">
+      <h2>如何防範勒索病毒？</h2>
+      <ul class="prevention-list">
+        <li>使用 <b>高強度獨一無二</b> 的密碼</li>
+        <li>系統/應用<strong>自動定期更新</strong></li>
+        <li>不點擊可疑連結與開啟陌生檔案</li>
+        <li>安裝正規防毒軟體，啟用防火牆</li>
+        <li>定期<span class="highlight">備份到離線裝置或雲端</span></li>
+      </ul>
+    </section>
+
+    <section id="rescue" class="minimal-section">
+      <h2>檔案被加密後怎麼辦？</h2>
+      <ul class="rescue-list">
+        <li>保持冷靜，不要急著付贖金</li>
+        <li>立刻斷開網路，避免病毒擴散</li>
+        <li>使用防毒軟體全面掃描移除病毒</li>
+        <li>從備份資料還原</li>
+        <li>資料無法救回？請資安專家協助</li>
+        <li>保留勒索訊息畫面，協助專家判斷</li>
+      </ul>
+      <div class="rescue-interact">
+        <button id="try-rescue-btn" class="minimal-btn">🎲 模擬救援結果</button>
+        <div id="rescue-result" class="minimal-answer"></div>
+      </div>
+      <div class="minimal-warn">⚠️ 小心二次中毒：勿亂下載「破解工具」！</div>
+    </section>
+
+    <section id="backup" class="minimal-section">
+      <h2>備份，真的有用嗎？</h2>
+      <div class="backup-duo">
+        <div class="backup-block">
+          <div class="backup-ico bad">🚫</div>
+          <div><b>沒備份</b></div>
+          <div class="backup-txt">資料無法救回<br><span class="bad">損失慘重</span></div>
+        </div>
+        <div class="backup-block">
+          <div class="backup-ico good">✅</div>
+          <div><b>有備份</b></div>
+          <div class="backup-txt">重灌後可復原<br><span class="good">快速安心</span></div>
+        </div>
+      </div>
+      <div class="minimal-tip">
+        備份應經常進行，且離線或雲端存放，避免同步遭加密。
+      </div>
+    </section>
+
+    <section id="more" class="minimal-section">
+      <h2>常見問題 Q&A</h2>
+      <dl class="faq-minimal">
+        <dt>中勒索病毒，一定救不回檔案嗎？</dt>
+        <dd>不一定。少部分新病毒無法解密，但有備份或遇上可用「官方解密工具」仍有機會救回。</dd>
+        <dt>付贖金就能還資料？</dt>
+        <dd>沒保證。多數駭客收錢後不理人，或假解密。切勿相信保證、也別自投陷阱。</dd>
+        <dt>防毒軟體能保護一切？</dt>
+        <dd>防毒能防禦大部分已知病毒，仍需良好習慣和備份，提升安全層級。</dd>
+        <dt>雲端備份就夠安全？</dt>
+        <dd>雲端有幫助，但若同步遭加密仍會損失，建議多重版本與離線備份。</dd>
+      </dl>
+    </section>
+  </main>
+  <main id="game-content" style="display:none;">
+    <section class="minimal-section" style="text-align:center;">
+      <h2>🦠 病毒打擊遊戲</h2>
+      <div id="virus-game-area">
+        <canvas id="virus-game-canvas" width="460" height="340" style="background:#f5faff;border-radius:12px;border:2px solid #dee8f8;margin: 11px 0 10px 0;box-shadow:0 1px 10px #d4e1fd1a;"></canvas>
+        <div id="virus-game-ui" style="margin:9px 0 8px 0;">
+          <span id="virus-game-score" class="game-label">得分：0</span>
+          <span id="virus-game-timer" class="game-label" style="margin-left:1.5em;">剩餘：15 秒</span>
+          <button id="virus-game-restart" class="minimal-btn" style="padding:8px 22px;font-size:1em;display:none;margin-left:1.5em;">再玩一次</button>
+        </div>
+      </div>
+      <div id="virus-game-endmsg" style="font-size:1.18em;font-weight:600;margin:1em 0 0 0;color:#1749b4;display:none;"></div>
+      <button id="game-exit-btn" class="game-exit-btn-minimal">返回主頁</button>
+    </section>
+  </main>
+  <footer class="minimal-footer">
+    <span>© 資安守護者 | 教育宣導用途</span>
+  </footer>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
